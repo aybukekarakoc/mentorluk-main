@@ -23,6 +23,7 @@ body {
 	height: 100vh;
 	object-fit: cover;
 	background-color: $navy;
+	overflow-y: hidden;
 }
 
 .container {
@@ -59,7 +60,7 @@ body {
 	scroll-snap-align: start;
 	position: relative;
 	// background-color: red;
-	background-image: url('../assets/manzara.jpg');
+	background-image: url('../assets/manzara-highres.jpg');
 	background-position: 60%, 100%;
 	background-size: cover;
 	// filter: opacity(0.7);
@@ -188,9 +189,94 @@ body {
 	background-color: green;
 }
 
-.yorumlar {
+.wrapper {
 	scroll-snap-align: start;
-	background-color: aquamarine;
+	// background-color: aquamarine;
+	max-width: 1200px;
+	margin: auto;
+	padding: 0 20px;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+}
+.wrapper .box {
+	background: #fdd781;
+	width: calc(33% - 10px);
+	padding: 25px;
+	border-radius: 3px;
+	box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.wrapper .box i.quote {
+	font-size: 20px;
+	color: #fdd781;
+}
+.wrapper .box .content {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+	padding-top: 10px;
+}
+.box .info .name {
+	font-weight: 700;
+	font-size: 25px;
+}
+.box .info .job {
+	font-size: 16px;
+	font-weight: 700;
+	color: #4a4a4a;
+}
+.box .info .stars {
+	margin-top: 2px;
+}
+.box .info .stars i {
+	color: #17a2b8;
+}
+.box .content .image {
+	height: 100px;
+	width: 100px;
+	padding: 3px;
+	background: seagreen;
+	border-radius: 50%;
+}
+.content .image img {
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+	border-radius: 50%;
+	border: 2px solid #fff;
+}
+.box:hover .content .image img {
+	border-color: #fff;
+}
+
+.wrapper .box .content .image {
+	position: absolute;
+	width: 132px;
+	height: 132px;
+	left: 43px;
+	top: 3670px;
+	padding: 3px;
+	background-color: sienna;
+	border-radius: 50%;
+}
+.wrapper .box .content .image .profile-2 {
+}
+.wrapper .box .content .image .profile-3 {
+}
+
+@media (max-width: 1045px) {
+	.wrapper .box {
+		width: calc(50% - 10px);
+		margin: 10px 0;
+	}
+}
+@media (max-width: 702px) {
+	.wrapper .box {
+		width: 100%;
+	}
 }
 
 .footer {
@@ -199,5 +285,6 @@ body {
 }
 
 .page {
-	height: 100vh;
+	min-height: 100vh;
+	height: 100%;
 }
