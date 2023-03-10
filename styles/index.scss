@@ -1,0 +1,203 @@
+/* Kulüp Renkleri: */
+/* Navy - #223242 */
+/* Sarı - #FDD781 */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+$navy: #223242;
+$yellow: #fdd781;
+$white: #fff;
+
+*,
+::before,
+::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+	// color: $navy;
+}
+
+body {
+	/* background-image: url('../assets/ytu.jpg'); */
+	height: 100vh;
+	object-fit: cover;
+	background-color: $navy;
+}
+
+.container {
+	display: flex;
+	flex-direction: row;
+	height: 100vh;
+	overflow-y: scroll;
+	scroll-snap-type: y mandatory;
+	scroll-behavior: smooth;
+}
+
+.contents {
+	width: 100%;
+	height: 100%;
+	// background-color: red;
+}
+
+.sidebar {
+	width: 6rem;
+	background-color: $navy;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	#icon {
+		position: fixed;
+		color: $yellow;
+		border: none;
+		background-color: transparent;
+	}
+}
+
+.landing-page {
+	scroll-snap-align: start;
+	position: relative;
+	// background-color: red;
+	background-image: url('../assets/manzara.jpg');
+	background-position: 60%, 100%;
+	background-size: cover;
+	// filter: opacity(0.7);
+	.kulup-logosu {
+		position: absolute;
+		left: 5vw;
+		top: 8vh;
+	}
+
+	.headings {
+		position: absolute;
+		left: 5vw;
+		bottom: 8vh;
+
+		font-family: sans-serif;
+
+		#ytu-text {
+			color: $white;
+			font-size: 4rem;
+			margin-bottom: -2rem;
+		}
+		#mentorluk-text {
+			color: $yellow;
+			font-size: 6rem;
+		}
+	}
+}
+
+.duyurular-istatistikler {
+	scroll-snap-align: start;
+	background-color: blue;
+
+	.duyurular {
+		height: 65%;
+		background-color: white;
+		display: flex;
+
+		.buyuk {
+			width: 56%;
+			background-color: red;
+			background-image: url('../assets/toplu_resim.jpg');
+			background-size: cover;
+			background-position: 50% 50%;
+		}
+
+		// .buyuk::before {
+		// 	content: '';
+		// }
+
+		.kucuk {
+			width: 44%;
+
+			.duyuru-header {
+				height: 50%;
+				background-color: $yellow;
+				position: relative;
+
+				display: flex;
+
+				justify-content: center;
+				align-items: center;
+
+				h1 {
+					font-size: 4rem;
+					font-weight: 800;
+					color: $navy;
+				}
+
+				a {
+					position: absolute;
+					color: $navy;
+					text-decoration: underline;
+					right: 0;
+					bottom: 0;
+				}
+			}
+
+			.kucuk-duyurular {
+				height: 50%;
+				background-color: $navy;
+				display: flex;
+				flex-direction: row;
+				flex-grow: 1;
+
+				.bir {
+					width: 50%;
+					// background-color: red;
+				}
+				.iki {
+					width: 50%;
+				}
+			}
+		}
+	}
+	.istatistikler {
+		height: 35%;
+		background-color: $navy;
+		display: flex;
+		width: 100%;
+		color: $yellow;
+
+		& > * {
+			display: flex;
+			flex-direction: column;
+			width: 100%;
+			justify-content: center;
+			align-items: center;
+			color: $yellow;
+			h3 {
+				font-size: 4rem;
+			}
+			h4 {
+				font-size: 1.5rem;
+			}
+		}
+	}
+}
+
+.biz-kimiz {
+	scroll-snap-align: start;
+	background-color: yellow;
+}
+
+.etkinlikler {
+	scroll-snap-align: start;
+	background-color: green;
+}
+
+.yorumlar {
+	scroll-snap-align: start;
+	background-color: aquamarine;
+}
+
+.footer {
+	scroll-snap-align: start;
+	background-color: chocolate;
+}
+
+.page {
+	height: 100vh;
+}
